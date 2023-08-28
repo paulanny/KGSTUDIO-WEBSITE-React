@@ -1,0 +1,26 @@
+.navbar     {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    /* left: 0; */
+    /* margin-left: 0; */
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbarlists {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    /* padding: 20px; */
+}
+
+.navbarimg img  {
+    width: 40px;
+}

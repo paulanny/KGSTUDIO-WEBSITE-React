@@ -1,0 +1,44 @@
+.servicesTextsndImg     {
+    display: flex;
+    flex-direction: row;
+    padding: 30px;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.servicesTexts  {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.servicesTexts h2   {
+    font-size: 30px;
+    color: rgb(63, 6, 116);
+    margin: 20px 0px;
+}
+
+.serviceimg     {
+    width: 50%;
+}
+
+.serviceimg img {
+    width: 90%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.servicesTexts p  {
+    text-align: justify;
+    width: 90%;
+    line-height: 2rem;
+    font-size: 15px;
+}
+
+.servicesTextsndImg:nth-child(even) {
+    flex-direction: row-reverse;
+}
