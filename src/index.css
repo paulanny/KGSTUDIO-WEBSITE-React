@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Fira Sans Condensed', sans-serif;
   background-color: #e4d3ff;
+  background-image: url('../src/assets/svgbg.png');
+  background-blend-mode: soft-light;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 code {
@@ -29,3 +33,16 @@ code {
   justify-content: center;
     align-items: center;
 }
+
+/* .pattern  {
+  width: 100vw;
+  height: 100vh;
+  mix-blend-mode: soft-light;
+  position: fixed;
+  z-index: -100;
+}
+
+.pattern  img  {
+  position: relative;
+  width: 100vw;
+} */

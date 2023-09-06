@@ -10,7 +10,7 @@
   
   footer  {
     padding: 30px 60px;
-    background-color: rgb(63, 6, 116);
+    background-color: #210a42;
     margin-top: -30px;
   }
   
@@ -20,7 +20,7 @@
   
   .copyright    {
     text-align: center;
-    font-size:18px;
+    font-size:15px;
     color: #efefef;
     margin-bottom: 25px;
   }

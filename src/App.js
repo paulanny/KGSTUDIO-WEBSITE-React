@@ -9,6 +9,7 @@ import Divider from "./Components/Divider";
 import ImgSlider from "./Components/ImgSlider";
 import TextsCom from "./Components/TextsCom";
 import Footer from "./Components/Footer";
+// import bgpattern from "../src/assets/svgbg.png";
 
 
 function App() {
@@ -19,6 +20,9 @@ function App() {
       <Hero />
       </div>
       <Divider />
+      {/* <div className="pattern">
+        <img src={bgpattern} alt="patternn"/>
+      </div> */}
       <TextsCom
       className="teamtxtP"
         id="team"

@@ -45,7 +45,7 @@ const Footer = () => {
     <p></p>
   </div>
 </div>
-<p className='copyright'>KAAPIT GRAPHICS STUDIO © 2023. </p>
+<p className='copyright'>© Copyright 2023, All Rights Reserved. </p>
 </footer>
     )
 }
