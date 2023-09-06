@@ -4,7 +4,7 @@ const Divider = () => {
   return (
     <div className='dividercomp'>
       <img src={DividerImg} />
-      <h1>Our Services</h1>
+      <h1 className='oservice'>Our Services</h1>
       {/* <h1>Our Services</h1> */}
     </div>
   );

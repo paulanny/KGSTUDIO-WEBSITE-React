@@ -6,15 +6,19 @@ import WhatWeDo from "./Components/WhatWeDo";
 import Illustratorimg from "./assets/analysis.png";
 import TeamImg from "./assets/pee.jpeg";
 import Divider from "./Components/Divider";
+import ImgSlider from "./Components/ImgSlider";
+
 
 function App() {
   return (
     <div className="App">
+      <div className="navhero">
       <NavBar />
       <Hero />
-      <Divider />
+      </div>
+      <Divider /> 
       {/* <Card> */}
-      <WhatWeDo
+       <WhatWeDo
         title="Logo Design"
         description="Logo design involves creating a 
         visually appealing and memorable symbol that 
@@ -25,8 +29,8 @@ function App() {
          essence and values in a simple yet impactful way."
         imageUrl={Illustratorimg}
         alt="illustratorimg"
-      />
-      <WhatWeDo
+       />
+       <WhatWeDo
         title="Digital Design"
         description="Digital design focuses on creating graphics tailored for
          online platforms. 
@@ -92,20 +96,31 @@ function App() {
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         />
+       {/* </Card>
+
+      //   <Card> */}
+         <Team
+          image={TeamImg}
+          name="Animashaun Paul"
+          description="Paul is a boy"
+          email="example@example.com"
+          twitter="https://twitter.com/yourTwitterHandle"
+          instagram="https://instagram.com/yourInstagramHandle"
+        /> 
         {/* </Card>
 
-        <Card> */}
-        <Team
+       <Card> */}
+       <Team
           image={TeamImg}
           name="Animashaun Paul"
           description="Paul is a boy"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
-        />
+        /> 
         {/* </Card>
 
-        <Card> */}
+       <Card> */}
         <Team
           image={TeamImg}
           name="Animashaun Paul"
@@ -113,11 +128,9 @@ function App() {
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
-        />
-        {/* </Card>
+        /> 
 
-        <Card> */}
-        <Team
+       <Team
           image={TeamImg}
           name="Animashaun Paul"
           description="Paul is a boy"
@@ -126,7 +139,7 @@ function App() {
           instagram="https://instagram.com/yourInstagramHandle"
         />
 
-        <Team
+       <Team
           image={TeamImg}
           name="Animashaun Paul"
           description="Paul is a boy"
@@ -134,19 +147,12 @@ function App() {
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         />
-
-        <Team
-          image={TeamImg}
-          name="Animashaun Paul"
-          description="Paul is a boy"
-          email="example@example.com"
-          twitter="https://twitter.com/yourTwitterHandle"
-          instagram="https://instagram.com/yourInstagramHandle"
-        />
-      </div>
+       </div>  
       {/* </Card> */}
       {/* </Card> */}
+      <ImgSlider />
     </div>
+    
   );
 }
 

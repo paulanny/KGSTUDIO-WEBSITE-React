@@ -1,17 +1,18 @@
 .navbar     {
-    display: flex;
-    width: 100%;
+    padding: 30px 40px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 100;
+    transition: all 0.3s ease-out 0s;
+    border-bottom: none;
+    background: transparent;
+    -webkit-box-pack: justify;
     justify-content: space-between;
+    width: 100%;
+    display: flex;
     align-items: center;
-    position: absolute;
-    z-index: 1;
-    right: 0;
-    /* left: 0; */
-    /* margin-left: 0; */
-    background-color: transparent;
-    padding: 20px;
-    color: white;
-    cursor: pointer;
 }
 
 .navbarlists {
@@ -21,6 +22,78 @@
     /* padding: 20px; */
 }
 
+.navbarimg  {
+    display: flex;
+}
+
+.navbarimg nav  {
+    display: flex;
+    min-height: 2px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.navbarimg nav a {
+    font-weight: 500;
+    font-size: 1.2em;
+    display: block;
+    margin-right: 40px;
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+}
+
 .navbarimg img  {
     width: 40px;
+    margin-right: 40px;
+}
+
+
+.menu   {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30px;
+    height: 20px;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.5s ease 0s;
+    margin-left: 70px;
+    
+}
+
+.menu div   {
+    height: 2px;
+    background-color: var(--white);
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.2s ease-out 0s;
+    position: unset;
+}
+
+.menu div:first-child {
+    width: 70%;
+}
+
+.menu div:last-child {
+    width: 50%;
+    margin-bottom: 0px;
+}
+
+.btnmenu    {
+    display: flex;
+}
+
+.bookkdes   {
+    padding: 8px 10px;
+    outline: none;
+    border-radius: 6px;
+    background-color: #D03DC1;
+    border: #D03DC1 1px solid;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
 }

@@ -15,6 +15,7 @@ const Hero = () => {
           minim labore commodo incididunt. 
         </p>
       </div>
+      <button className="herobookdes">Book a Design</button>
     </div>
   );
 };
