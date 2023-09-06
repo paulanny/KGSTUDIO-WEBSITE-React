@@ -21,11 +21,17 @@ import imgNineSlide from "../assets/ourworks/9.png";
 import imgTenSlide from "../assets/ourworks/10.png";
 import imgElevenSlide from "../assets/ourworks/11.png";
 import imgTwelveSlide from "../assets/ourworks/12.png";
+import TextsCom from './TextsCom';
 
 const ImgSlider = () => {
   return (
     <div className="container">
-      <h1 className="heading">Flower Gallery</h1>
+      <TextsCom
+      className="teamtxtp"
+        id="team"
+        description="Some of our works"
+        title="FEATURED DESIGNS"
+        />
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -95,6 +101,10 @@ const ImgSlider = () => {
           <div className="swiper-pagination"></div>
         </div>
       </Swiper>
+      <div className='sliderbtn'>
+      <button className='seemore'>See more Designs</button>
+      <button className='herobookdes'>Book a Design</button>
+      </div>
     </div>
   );
 }

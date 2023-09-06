@@ -5,6 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Fira Sans Condensed', sans-serif;
+  background-color: #e4d3ff;
 }
 
 code {
@@ -19,4 +20,12 @@ code {
   background-size: cover;
   background-position: center center;
   position: relative;
+}
+
+
+.flexdiv  {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+    align-items: center;
 }

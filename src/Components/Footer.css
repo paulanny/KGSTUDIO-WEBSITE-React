@@ -1,0 +1,119 @@
+.horizontaldiv  {
+    height: 1px;
+      background: rgba(255, 255, 255, 0.25);
+      width: 90%;
+      margin: 5em auto 30px auto;
+      /* margin-top: 5em;
+      margin-bottom: 30px; */
+  
+  }
+  
+  footer  {
+    padding: 30px 60px;
+    background-color: rgb(63, 6, 116);
+    margin-top: -30px;
+  }
+  
+  .socials    {
+    display: flex;
+  }
+  
+  .copyright    {
+    text-align: center;
+    font-size:18px;
+    color: #efefef;
+    margin-bottom: 25px;
+  }
+  
+  .divsoc  {
+      width: 40px;
+      height: 40px;
+      border: 1px solid #210a42;
+      border-radius: 50%;
+      padding: 7px;
+      margin-right: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #210a42;
+      cursor: pointer;
+  }
+  
+  .divsoc img  {
+    width: 20px;
+  }
+  
+  .referencep     {
+    display: flex;
+    flex-direction: column;
+    font-family: 'fira sans condensed', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.435);
+    line-height: 140.2%;
+  }
+  
+  .ref   {
+    margin-bottom: 10px;
+  }
+  .tributendsocials   {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 60px;
+    margin-bottom: 30px;
+  }
+  
+  .soca     {
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  
+  @media (max-width:1000px) {
+    .tributendsocials {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 60px;
+      margin-bottom: 30px;
+      flex-direction: column;
+  }
+  
+  .socials {
+    display: flex;
+    margin-bottom: 35px;
+  }
+  .horizontaldiv {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.25);
+    width: 80%;
+    margin: 1em auto 30px auto;
+  }
+}
+
+@media (max-width:650px)  {
+    footer {
+     padding: 10px 20px;
+ }
+}
+
+@media (max-width:550px) {
+    footer {
+      padding: 10px 20px;
+  }
+}
+
+@media (max-width:380px) {
+    .tributendsocials {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px 10px;
+      margin-bottom: 30px;
+      flex-direction: column;
+  }
+}

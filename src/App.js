@@ -7,6 +7,8 @@ import Illustratorimg from "./assets/analysis.png";
 import TeamImg from "./assets/pee.jpeg";
 import Divider from "./Components/Divider";
 import ImgSlider from "./Components/ImgSlider";
+import TextsCom from "./Components/TextsCom";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -16,7 +18,14 @@ function App() {
       <NavBar />
       <Hero />
       </div>
-      <Divider /> 
+      <Divider />
+      <TextsCom
+      className="teamtxtP"
+        id="team"
+        description="What we can help with"
+        title="OUR SERVICES"
+        
+      /> 
       {/* <Card> */}
        <WhatWeDo
         title="Logo Design"
@@ -87,11 +96,20 @@ function App() {
       />
 
       {/* <Card> */}
+      
+      <ImgSlider />
       <div className="Team-cards">
+      <TextsCom
+      className="teamtxt"
+        id="team"
+        description="The Team Behind the Scene"
+        title="MEET OUR TEAM"
+        />
+        <div className="flexdiv">
         <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Executive Officer"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
@@ -102,7 +120,7 @@ function App() {
          <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Director"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
@@ -113,18 +131,20 @@ function App() {
        <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Manager"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         /> 
+        </div>
         {/* </Card>
 
        <Card> */}
+       <div className="flexdiv">
         <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Director"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
@@ -133,7 +153,7 @@ function App() {
        <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Design TeamLead"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
@@ -142,15 +162,18 @@ function App() {
        <Team
           image={TeamImg}
           name="Animashaun Paul"
-          description="Paul is a boy"
+          description="Marketing Officer"
           email="example@example.com"
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         />
+        </div>
        </div>  
+       <Divider />
+       <Footer />
       {/* </Card> */}
       {/* </Card> */}
-      <ImgSlider />
+      
     </div>
     
   );

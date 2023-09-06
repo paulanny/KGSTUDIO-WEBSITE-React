@@ -1,49 +1,82 @@
 .Team-card {
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-    background-color: white;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin: 20px 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    padding: 15px 5px;
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  /* background-color:  rgba(228,211,255,0.7); */
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin: 20px 10px;
+  /* -webkit-backdrop-filter: blur(8px); 
+  backdrop-filter: blur(7px); 
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08); */
+  /* backdrop-filter: grayscale(.8) blur(5px); */
+  /* filter: drop-shadow(2px 4px 6px #e4d3ff); */
+  box-shadow: inset 0 0 0 200px rgba(255, 255, 255, 0.08);
+
+  border-top: 2px solid rgba(225, 225, 225, 0.3);
+  border-left: 2px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.2);
+  padding: 15px 5px;
 }
 
-.Team-cards     {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+.Team-cards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(63, 6, 116);
+  /* background-image: url(../assets/bg1.jpg);
+  background-repeat: no-repeat; */
+  /* background-size: cover; */
+  /* background-position: center center; */
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px 40px 40px;
 }
 
-.teamImg img  {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            object-fit: cover;
-
+.teamImg img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
+.Team-card h3 {
+  font-weight: 700;
+  font-size: 16px;
+  color: #efefef;
+  margin: 12px auto;
+}
+
+.Team-card p {
+  font-weight: 500;
+  font-size: 13px;
+  color: #fac3f4;
+  margin: 0px auto;
+}
 
 .contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .contact a {
-    margin: 0 3px;
-    text-decoration: none;
-    color: #333;
-    
-  }
-  
-  .contact img {
-    width: 20px; 
-    height: 20px;
-    border-radius: 50%;
-    background-color: #c7b3ca;
-    padding: 5px
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.contact a {
+  margin: 0 3px;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: rgb(63, 6, 116);
+  border-top: 2px solid rgba(225, 225, 225, 0.3);
+  border-left: 2px solid rgba(225, 225, 225, 0.1);
+  border-right: 1px solid rgba(225, 225, 225, 0.2);
+  border-bottom: 2px solid rgba(225, 225, 225, 0.3);
+  padding: 5px;
+}

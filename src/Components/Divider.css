@@ -1,12 +1,12 @@
+.dividercomp    {
+    width: 100%;
+}
+
 .dividercomp img    {
     width: 100%;
     vertical-align: middle;
     display: inline-block;
-    margin-top: -15;
+    margin-top: -15px;
+    position: relative;
 }
 
-.oservice   {
-    padding: 20px 40px;
-    font-size: 45px;
-    text-transform: uppercase;
-}
