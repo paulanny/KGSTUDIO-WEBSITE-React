@@ -1,0 +1,38 @@
+.mobilemenulinks {
+  pointer-events: none;
+  color: white;
+  position: relative;
+  z-index: 2147483647;
+  /* padding-right: ;
+    padding-bottom: ;
+    padding-left: ; */
+  transform: translateX(100px);
+  opacity: 0;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s;
+  overflow: auto;
+}
+
+.mobilemenuOpen {
+    pointer-events: auto;
+    color: white;
+    position: relative;
+    z-index: 2147483647;
+    /* padding-right: ;
+    padding-bottom: ;
+    padding-left: ; */
+    transform: translateX(0px);
+    opacity: 1;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    transition: transform 0.6s ease 0.4s, opacity 0.6s ease 0.4s;
+    overflow: auto;
+
+}
