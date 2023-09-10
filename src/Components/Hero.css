@@ -36,6 +36,7 @@ color: white;
 cursor: pointer;
 font-size: 14px;
 margin-top: 5rem;
+margin-bottom: 7rem;
 transition: all .3s cubic-bezier(.165, .84, .44, 1);
 }
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 import kaapitLogo from "../assets/kaapitLogo.png";
 
-function NavBar() {
+function NavBar(props) {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -40,7 +40,7 @@ function NavBar() {
       </div>
 
       <div className="btnmenu">
-        <button className="bookkdes">Book a Design</button>
+        <button className="bookkdes" onClick={props.showModal}>Book a Design</button>
         <div
           className={`menu ${isMobileMenuOpen ? "menuclose" : ""}`}
           onClick={toggleMobileMenu}

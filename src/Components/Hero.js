@@ -1,7 +1,7 @@
 import React from "react";
 import './Hero.css';
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div className="heropage">
       <div className="heroimage__texts">
@@ -15,7 +15,7 @@ const Hero = () => {
           minim labore commodo incididunt. 
         </p>
       </div>
-      <button className="herobookdes">Book a Design</button>
+      <button className="herobookdes" onClick={props.showModal}>Book a Design</button>
     </div>
   );
 };

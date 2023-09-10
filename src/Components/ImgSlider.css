@@ -153,6 +153,27 @@ html {
   
 }
 
+.sliderbookdes   {
+  padding: 17px 35px;
+  outline: none;
+  border-radius: 10px;
+  background-color: #D03DC1;
+  border: #D03DC1 1px solid;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5rem;
+  transition: all .3s cubic-bezier(.165, .84, .44, 1);
+  }
+  
+  .sliderbookdes:hover  {
+      transform: translate(0, -8px);
+      box-shadow: 0 10px 16px -6px rgba(65, 6, 3, .31);
+  
+  
+} 
+
+
 .seemore  {
   padding: 17px 22px;
 outline: none;

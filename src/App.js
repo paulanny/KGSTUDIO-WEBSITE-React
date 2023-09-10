@@ -1,3 +1,4 @@
+import { useState } from "react";
 import NavBar from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Card from "./Components/Card";
@@ -9,28 +10,37 @@ import Divider from "./Components/Divider";
 import ImgSlider from "./Components/ImgSlider";
 import TextsCom from "./Components/TextsCom";
 import Footer from "./Components/Footer";
+import Modal from "./Components/Modal";
+import Backdrop from "./Components/BackDrop";
 // import bgpattern from "../src/assets/svgbg.png";
 
 
-function App() {
+const App = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+
+  const showModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
     <div className="App">
+      <Modal show={modalIsOpen} closed={closeModal} />
+      <Backdrop show={modalIsOpen} closed={closeModal} />
       <div className="navhero">
-      <NavBar />
-      <Hero />
+      <NavBar showModal={showModal}/>
+      <Hero showModal={showModal}/>
       </div>
       <Divider />
-      {/* <div className="pattern">
-        <img src={bgpattern} alt="patternn"/>
-      </div> */}
       <TextsCom
       className="teamtxtP"
         id="team"
         description="What we can help with"
         title="OUR SERVICES"
-        
-      /> 
-      {/* <Card> */}
+        /> 
        <WhatWeDo
         title="Logo Design"
         description="Logo design involves creating a 
@@ -98,10 +108,7 @@ function App() {
         imageUrl={Illustratorimg}
         alt="illustratorimg"
       />
-
-      {/* <Card> */}
-      
-      <ImgSlider />
+      <ImgSlider showModal={showModal}/>
       <div className="Team-cards">
       <TextsCom
       className="teamtxt"
@@ -118,9 +125,6 @@ function App() {
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         />
-       {/* </Card>
-
-      //   <Card> */}
          <Team
           image={TeamImg}
           name="Animashaun Paul"
@@ -129,9 +133,6 @@ function App() {
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         /> 
-        {/* </Card>
-
-       <Card> */}
        <Team
           image={TeamImg}
           name="Animashaun Paul"
@@ -141,9 +142,6 @@ function App() {
           instagram="https://instagram.com/yourInstagramHandle"
         /> 
         </div>
-        {/* </Card>
-
-       <Card> */}
        <div className="flexdiv">
         <Team
           image={TeamImg}
@@ -173,10 +171,9 @@ function App() {
         />
         </div>
        </div>  
+       
        <Divider />
        <Footer />
-      {/* </Card> */}
-      {/* </Card> */}
       
     </div>
     

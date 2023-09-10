@@ -18,12 +18,14 @@ code {
 }
 
 .navhero  {
-  height: 100vh;
+  /* height: 100vh; */
   background: url(../src/assets/backdrop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  position: relative;
+  background-attachment: fixed;
+  background-color: #f0f0f0;
+  /* position: relative; */
 }
 
 
@@ -34,15 +36,9 @@ code {
     align-items: center;
 }
 
-/* .pattern  {
-  width: 100vw;
-  height: 100vh;
-  mix-blend-mode: soft-light;
-  position: fixed;
-  z-index: -100;
+@media (max-width: 768px) {
+  .navhero  {
+    background-size: contain;
+    background-position: top;
+  }
 }
-
-.pattern  img  {
-  position: relative;
-  width: 100vw;
-} */

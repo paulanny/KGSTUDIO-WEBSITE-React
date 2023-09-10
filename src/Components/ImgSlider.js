@@ -23,7 +23,7 @@ import imgElevenSlide from "../assets/ourworks/11.png";
 import imgTwelveSlide from "../assets/ourworks/12.png";
 import TextsCom from './TextsCom';
 
-const ImgSlider = () => {
+const ImgSlider = (props) => {
   return (
     <div className="container">
       <TextsCom
@@ -103,7 +103,7 @@ const ImgSlider = () => {
       </Swiper>
       <div className='sliderbtn'>
       <button className='seemore'>See more Designs</button>
-      <button className='herobookdes'>Book a Design</button>
+      <button className='sliderbookdes' onClick={props.showModal}>Book a Design</button>
       </div>
     </div>
   );
