@@ -1,8 +1,5 @@
 import React from "react";
 import useInput from "../hooks/use-input";
-// import { useState } from 'react';
-// import DatePicker from 'react-datepicker';
-// import 'react-datepicker/dist/react-datepicker.css';
 import "./Modal.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
@@ -12,9 +9,8 @@ const Modal = (props) => {
   const {
     show,
     closed,
-    submitHandler, // This is the submitHandler function passed as a prop
+    submitHandler, 
   } = props;
-  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const cssClasses = ["Modal", props.show ? "ModalOpen" : "ModalClosed"];
 
@@ -67,7 +63,7 @@ const Modal = (props) => {
  const handleSubmit = async (event) => {
   event.preventDefault();
 
-  // Check form validity
+  
   let formIsValid = false;
 
   if (
@@ -93,11 +89,8 @@ const Modal = (props) => {
   };
 
   console.log(formData);
-
-  // Call the submitHandler function
   submitHandler(formData);
 
-  // Reset form fields and formIsValid after submission
   resetFirstName();
   resetLastName();
   resetEmail();

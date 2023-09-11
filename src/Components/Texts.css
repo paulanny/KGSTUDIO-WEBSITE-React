@@ -1,5 +1,4 @@
 .textscompo  {
-    /* margin-top: 30px; */
     margin-bottom: 20px;
     padding: 0px 60px;
     text-align: center;
@@ -14,7 +13,6 @@
     text-align: center;
     font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 700;
-    /* margin-top: -20px; */
 }
 
 .teamtxtP   {

@@ -38,15 +38,6 @@ const BasicForm = (props) => {
     reset: resetdesDescrip,
   } = useInput(isNotEmpty);
 
-  // const {
-  //   value: whatsappValue,
-  //   isValid: whatsappIsValid,
-  //   hasError: whatsappHasError,
-  //   valueChangeHandler: whatsappChangeHandler,
-  //   inputBlurHandler: whatsappBlurHandler,
-  //   reset: resetWhatsapp,
-  // } = useInput(isNotEmpty);
-
   const {
     value: dateValue,
     isValid: dateIsValid,
@@ -81,7 +72,6 @@ const BasicForm = (props) => {
       firstNameValue,
       lastNameValue,
       emailValue,
-      // whatsappValue,
       desDescripValue,
       dateValue
     );
@@ -89,7 +79,6 @@ const BasicForm = (props) => {
     resetFirstName();
     resetLastName();
     resetEmail();
-    // resetWhatsapp();
     resetdesDescrip();
     resetDate();
   };
@@ -101,9 +90,6 @@ const BasicForm = (props) => {
     ? "form-control invalid"
     : "form-control";
   const emailClasses = emailHasError ? "form-control invalid" : "form-control";
-  // const whatsappClasses = whatsappHasError
-  //   ? "form-control invalid"
-  //   : "form-control";
   const designDescriptionClasses = desDescripHasError
     ? "form-control invalid"
     : "form-control";
@@ -209,19 +195,6 @@ const BasicForm = (props) => {
             <p className="error-text">Please select a valid date.</p>
           )}
         </div>
-        {/* <div className={whatsappClasses}>
-          <label htmlFor="name">WhatsApp Number</label>
-          <input
-            type="number"
-            id="whatsapp"
-            value={whatsappValue}
-            onChange={whatsappChangeHandler}
-            onBlur={whatsappBlurHandler}
-          />
-          {whatsappHasError && (
-            <p className="error-text">Please enter a valid WhatsApp number.</p>
-          )}
-        </div> */}
       </div>
 
       <div className="form-actions">

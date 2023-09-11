@@ -71,28 +71,3 @@ function NavBar(props) {
 }
 export default NavBar;
 
-//tested navmenu
-// function Navbar() {
-
-//   return (
-//     <div className="navbar">
-//       <div className="btnmenu">
-//         <button className="bookkdes" >Book a Design</button>
-//         <div
-//           <div className="first"></div>
-//           <div className="second"></div>
-//           <div className="third"></div>
-//         </div>
-//       </div>
-
-//         <div className="mobilemenulinks">
-//           <a>About us</a>
-//           <a>Our Team</a>
-//           <a>Contact us</a>
-//           <a>Designs</a>
-//           <a>Unknown</a>
-//         </div>
-//       )}
-//     </div>
-//   );
-// }
