@@ -17,6 +17,10 @@ import Backdrop from "./Components/BackDrop";
 
 const App = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [error, setError] = useState(null);
+
+  
 
   const showModal = () => {
     setModalIsOpen(true);
@@ -26,13 +30,26 @@ const App = () => {
     setModalIsOpen(false);
   };
 
+  async function submitHandler(formData)  {
+    const response = await fetch('https://kaapit-wesite-default-rtdb.firebaseio.com/designs.json', {
+
+    method: 'POST',
+    body: JSON.stringify(formData),
+    headers: {
+      'Content-Type': 'application/json',
+    }
+  });
+  const data = await response.json();
+  console.log(data);
+    };
+  
   return (
     <div className="App">
-      <Modal show={modalIsOpen} closed={closeModal} />
-      <Backdrop show={modalIsOpen} closed={closeModal} />
+      <Modal show={modalIsOpen} closed={closeModal} submitHandler={submitHandler}/>
+      <Backdrop show={modalIsOpen} closed={closeModal}  submitHandler={submitHandler} />
       <div className="navhero">
-      <NavBar showModal={showModal}/>
-      <Hero showModal={showModal}/>
+      <NavBar showModal={showModal}  submitHandler={submitHandler}/>
+      <Hero showModal={showModal}  submitHandler={submitHandler}/>
       </div>
       <Divider />
       <TextsCom

@@ -1,3 +1,68 @@
+/* Customize the date picker input field */
+/* .react-datepicker-wrapper {
+  display: inline-block;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.react-datepicker__input-container {
+  display: inline-block;
+}
+
+.react-datepicker__input-container input {
+  width: 200px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+} */
+
+/* Customize the calendar */
+/* .react-datepicker {
+  font-family: Arial, sans-serif;
+}
+
+.react-datepicker__header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.react-datepicker__day-names {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0;
+} */
+
+/* .react-datepicker__day-name {
+  padding: 10px;
+}
+
+.react-datepicker__day {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.react-datepicker__day--selected {
+  background-color: #007bff;
+  color: #fff;
+} */
+
+/* Customize the arrow icons for navigation */
+/* .react-datepicker__navigation {
+  border: 1px solid #007bff;
+  background-color: #fff;
+  color: #007bff;
+}
+
+.react-datepicker__navigation--next {
+  border-left-width: 0;
+}
+
+.react-datepicker__navigation--previous {
+  border-right-width: 0;
+} */
+
+
 .Modal {
     position: fixed;
     z-index: 2000;
@@ -90,8 +155,8 @@ form  {
     /* margin-bottom: 10px; */
     /* margin-top: 10px; */
     outline: 0;
-    background: #ccc;
-    color: #210a42;
+    background: white;
+    /* color: #210a42; */
     border: 1px solid #210a42;
     padding: 24px;
     border-radius: 4px;
@@ -101,6 +166,7 @@ form  {
     
     border: 1px solid #240370;
     box-shadow: 0 10px 16px -6px rgba(65, 6, 3, .31);
+    background: #e0d4fd;
   }
   
   .control-group {

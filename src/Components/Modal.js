@@ -1,13 +1,23 @@
 import React from "react";
 import useInput from "../hooks/use-input";
+// import { useState } from 'react';
+// import DatePicker from 'react-datepicker';
+// import 'react-datepicker/dist/react-datepicker.css';
 import "./Modal.css";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.includes("@");
 
 const Modal = (props) => {
+  const {
+    show,
+    closed,
+    submitHandler, // This is the submitHandler function passed as a prop
+  } = props;
+
   const cssClasses = ["Modal", props.show ? "ModalOpen" : "ModalClosed"];
 
+  
   const {
     value: firstNameValue,
     isValid: firstNameIsValid,
@@ -42,61 +52,76 @@ const Modal = (props) => {
     reset: resetdesDescrip,
   } = useInput(isNotEmpty);
 
-  // const {
-  //   value: whatsappValue,
-  //   isValid: whatsappIsValid,
-  //   hasError: whatsappHasError,
-  //   valueChangeHandler: whatsappChangeHandler,
-  //   inputBlurHandler: whatsappBlurHandler,
-  //   reset: resetWhatsapp,
-  // } = useInput(isNotEmpty);
-
+  
   const {
     value: dateValue,
     isValid: dateIsValid,
-    hasError: dateHasError,
     valueChangeHandler: dateChangeHandler,
     inputBlurHandler: dateBlurHandler,
     reset: resetDate,
   } = useInput(isNotEmpty);
 
+  
+
+ const handleSubmit = async (event) => {
+  event.preventDefault();
+
+  // Check form validity
   let formIsValid = false;
 
   if (
     firstNameIsValid &&
     lastNameIsValid &&
     emailIsValid &&
-    // whatsappIsValid &&
     desDescripIsValid &&
     dateIsValid
   ) {
     formIsValid = true;
   }
 
-  const submitHandler = (event) => {
-    event.preventDefault();
+  if (!formIsValid) {
+    return;
+  }
 
-    if (!formIsValid) {
-      return;
-    }
-
-    console.log("Submitted!");
-    console.log(
-      firstNameValue,
-      lastNameValue,
-      emailValue,
-      // whatsappValue,
-      desDescripValue,
-      dateValue
-    );
-
-    resetFirstName();
-    resetLastName();
-    resetEmail();
-    // resetWhatsapp();
-    resetdesDescrip();
-    resetDate();
+  const formData = {
+    firstName: firstNameValue,
+    lastName: lastNameValue,
+    email: emailValue,
+    designDescription: desDescripValue,
+    expectedDeliveryDate: dateValue,
   };
+
+  console.log(formData);
+
+  // Call the submitHandler function
+  submitHandler(formData);
+
+  // Reset form fields and formIsValid after submission
+  resetFirstName();
+  resetLastName();
+  resetEmail();
+  resetdesDescrip();
+  resetDate();
+};
+
+  
+  
+  
+  //   console.log("Submitted!");
+  //   console.log(
+  //     firstNameValue,
+  //     lastNameValue,
+  //     emailValue,
+  //     desDescripValue,
+  //     dateValue
+  //   );
+
+  //   resetFirstName();
+  //   resetLastName();
+  //   resetEmail();
+  //   resetdesDescrip();
+  //   resetDate();
+  // };
 
   const firstNameClasses = firstNameHasError
     ? "form-control invalid"
@@ -105,14 +130,11 @@ const Modal = (props) => {
     ? "form-control invalid"
     : "form-control";
   const emailClasses = emailHasError ? "form-control invalid" : "form-control";
-  // const whatsappClasses = whatsappHasError
-  //   ? "form-control invalid"
-  //   : "form-control";
+  
   const designDescriptionClasses = desDescripHasError
     ? "form-control invalid"
     : "form-control";
-
-  const dateClasses = dateHasError ? "form-control invalid" : "form-control";
+    
   return (
     <div className={cssClasses.join(" ")}>
          <div className="modalhead">
@@ -209,28 +231,12 @@ const Modal = (props) => {
             onChange={dateChangeHandler}
             onBlur={dateBlurHandler}
           />
-          {dateHasError && (
-            <p className="error-text">Please select a valid date.</p>
-          )}
         </div>
-        {/* <div className={whatsappClasses}>
-          <label htmlFor="name">WhatsApp Number</label>
-          <input
-            type="number"
-            id="whatsapp"
-            value={whatsappValue}
-            onChange={whatsappChangeHandler}
-            onBlur={whatsappBlurHandler}
-          />
-          {whatsappHasError && (
-            <p className="error-text">Please enter a valid WhatsApp number.</p>
-          )}
-        </div> */}
       </div>
 
       <div className="form-actions">
-        <button className="formbtn" onClick={props.closed}>Cancel</button>
-        <button className="formbtn" disabled={!formIsValid}>
+        <button className="formbtn" onClick={closed}>Cancel</button>
+        <button className="formbtn" onClick={handleSubmit}>
           Book Design
         </button>
       </div>
