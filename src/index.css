@@ -35,6 +35,25 @@ code {
   justify-content: center;
     align-items: center;
 }
+.success-message {
+  background-color: #4CAF50; /* Background color */
+  color: white; /* Text color */
+  padding: 10px; /* Padding around the message */
+  text-align: center; /* Center-align text */
+  position: fixed; /* Position it fixed on the screen */
+  bottom: 20px; /* Distance from the bottom */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  z-index: 1000; /* Set a high z-index to ensure it's displayed above other elements */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  border-radius: 4px; /* Rounded corners */
+  transition: opacity 0.3s ease; /* Add a smooth fade-in effect */
+  opacity: 1; /* Initially hidden */
+}
+
+/* .success-message.active {
+  opacity: 1;
+} */
 
 @media (max-width: 768px) {
   .navhero  {

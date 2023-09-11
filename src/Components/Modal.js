@@ -14,6 +14,7 @@ const Modal = (props) => {
     closed,
     submitHandler, // This is the submitHandler function passed as a prop
   } = props;
+  // const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const cssClasses = ["Modal", props.show ? "ModalOpen" : "ModalClosed"];
 
@@ -104,24 +105,6 @@ const Modal = (props) => {
   resetDate();
 };
 
-  
-  
-  
-  //   console.log("Submitted!");
-  //   console.log(
-  //     firstNameValue,
-  //     lastNameValue,
-  //     emailValue,
-  //     desDescripValue,
-  //     dateValue
-  //   );
-
-  //   resetFirstName();
-  //   resetLastName();
-  //   resetEmail();
-  //   resetdesDescrip();
-  //   resetDate();
-  // };
 
   const firstNameClasses = firstNameHasError
     ? "form-control invalid"
@@ -236,8 +219,8 @@ const Modal = (props) => {
 
       <div className="form-actions">
         <button className="formbtn" onClick={closed}>Cancel</button>
-        <button className="formbtn" onClick={handleSubmit}>
-          Book Design
+        <button className="formbtn" onClick={handleSubmit} disabled={props.loading}>
+        {props.loading ? 'Submitting...' : 'Book Design'}
         </button>
       </div>
     </form>

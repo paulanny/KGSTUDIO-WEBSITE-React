@@ -12,12 +12,13 @@ import TextsCom from "./Components/TextsCom";
 import Footer from "./Components/Footer";
 import Modal from "./Components/Modal";
 import Backdrop from "./Components/BackDrop";
-// import bgpattern from "../src/assets/svgbg.png";
+
 
 
 const App = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  // const [isLoading, setIsLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   // const [error, setError] = useState(null);
 
   
@@ -30,22 +31,48 @@ const App = () => {
     setModalIsOpen(false);
   };
 
-  async function submitHandler(formData)  {
-    const response = await fetch('https://kaapit-wesite-default-rtdb.firebaseio.com/designs.json', {
-
-    method: 'POST',
-    body: JSON.stringify(formData),
-    headers: {
-      'Content-Type': 'application/json',
-    }
-  });
-  const data = await response.json();
-  console.log(data);
-    };
+  async function submitHandler(formData) {
+    try {
+      // Set the loading state to true
+      setLoading(true);
   
+      const response = await fetch('https://kaapit-wesite-default-rtdb.firebaseio.com/designs.json', {
+        method: 'POST',
+        body: JSON.stringify(formData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      if (!response.ok) {
+        throw new Error('Failed to send data to Firebase REST API');
+      }
+
+      console.log('Data sent to Firebase REST API successfully!');
+      setShowSuccessMessage(true);
+
+      setTimeout(()=>{
+        setShowSuccessMessage(false);
+      }, 3000);
+  } catch (error) {
+    console.error('Error sending data to Firebase REST API:', error);
+    // Optionally, display an error message to the user
+  } finally {
+    setTimeout(()=>{
+      setLoading(false);
+    }, 3000);
+    
+    closeModal();
+  }
+}
+
   return (
     <div className="App">
-      <Modal show={modalIsOpen} closed={closeModal} submitHandler={submitHandler}/>
+      <Modal show={modalIsOpen} closed={closeModal} submitHandler={submitHandler} loading={loading} showSuccessMessage={showSuccessMessage}/>
+      {showSuccessMessage && (
+        <div className="success-message">
+          <p>Your design has been booked successfully. Our team will get in touch with you shortly.</p>
+        </div>)}
       <Backdrop show={modalIsOpen} closed={closeModal}  submitHandler={submitHandler} />
       <div className="navhero">
       <NavBar showModal={showModal}  submitHandler={submitHandler}/>
