@@ -124,7 +124,7 @@ const Modal = (props) => {
         <form onSubmit={submitHandler}>
       <div className="control-group">
         <div className={firstNameClasses}>
-          <label htmlFor="name">First Name</label>
+          <label htmlFor="name">Name/Brand's Name</label>
           <input
             type="text"
             id="name"
@@ -133,25 +133,9 @@ const Modal = (props) => {
             onBlur={firstNameBlurHandler}
           />
           {firstNameHasError && (
-            <p className="error-text">Please enter a first name.</p>
+            <p className="error-text">Please enter your Name or your Brand's Name.</p>
           )}
         </div>
-        <div className={lastNameClasses}>
-          <label htmlFor="name">Last Name</label>
-          <input
-            type="text"
-            id="name"
-            value={lastNameValue}
-            onChange={lastNameChangeHandler}
-            onBlur={lastNameBlurHandler}
-          />
-          {lastNameHasError && (
-            <p className="error-text">Please enter a last name.</p>
-          )}
-        </div>
-      </div>
-
-      <div className="control-group">
         <div className={emailClasses}>
           <label htmlFor="name">Select Design Type</label>
           <select name="designs" id="designss">
@@ -167,21 +151,6 @@ const Modal = (props) => {
           </select>
         </div>
 
-        <div className={designDescriptionClasses}>
-          <label htmlFor="name">Design Description</label>
-          <input
-            type="text"
-            id="DesignDescrip"
-            value={desDescripValue}
-            onChange={desDescripChangeHandler}
-            onBlur={desDescripBlurHandler}
-          />
-          {desDescripHasError && (
-            <p className="error-text">
-              Please enter a short description of the design.
-            </p>
-          )}
-        </div>
       </div>
 
       <div className="control-group">
@@ -190,6 +159,7 @@ const Modal = (props) => {
           <input
             type="text"
             id="name"
+            placeholder="Enter a valid email address"
             value={emailValue}
             onChange={emailChangeHandler}
             onBlur={emailBlurHandler}
@@ -207,6 +177,27 @@ const Modal = (props) => {
             onChange={dateChangeHandler}
             onBlur={dateBlurHandler}
           />
+        </div>
+      </div>
+
+      <div className="control-group">
+       
+        <div className={designDescriptionClasses}>
+          <label htmlFor="name">Design Description</label>
+          <textarea
+            type="text"
+            id="DesignDescrip"
+            rows="8" 
+            cols="60"
+            value={desDescripValue}
+            onChange={desDescripChangeHandler}
+            onBlur={desDescripBlurHandler}
+          />
+          {desDescripHasError && (
+            <p className="error-text">
+              Please enter a short description of the design.
+            </p>
+          )}
         </div>
       </div>
 
