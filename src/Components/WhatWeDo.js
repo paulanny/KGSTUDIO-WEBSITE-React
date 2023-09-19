@@ -15,7 +15,7 @@ const WhatWeDo = (props) => {
         <img src={props.imageUrl} alt="Content" />
       </div>
     </div>
-    <div className='allservices'></div>
+    {/* <div className='allservices'></div> */}
     </Fragment>
   );
 };

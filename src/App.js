@@ -160,6 +160,7 @@ const App = () => {
         description="The Team Behind the Scene"
         title="MEET OUR TEAM"
         />
+        <div className="flexdivflex">
         <div className="flexdiv">
         <Team
           image={TeamImg}
@@ -213,6 +214,7 @@ const App = () => {
           twitter="https://twitter.com/yourTwitterHandle"
           instagram="https://instagram.com/yourInstagramHandle"
         />
+        </div>
         </div>
        </div>  
        

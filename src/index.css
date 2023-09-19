@@ -27,6 +27,9 @@ code {
   
 }
 
+.flexdivflex    {
+  width: 100%;
+}
 
 .flexdiv  {
   display: flex;
@@ -50,11 +53,10 @@ code {
   opacity: 1; 
 }
 
-
-
-@media (max-width: 768px) {
-  .navhero  {
-    background-size: contain;
-    background-position: top;
-  }
+@media(max-width:600px){
+  .flexdivflex {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 40px;
+}
 }

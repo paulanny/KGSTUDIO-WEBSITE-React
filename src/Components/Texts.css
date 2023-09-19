@@ -11,7 +11,7 @@
     text-transform: uppercase;
     color: #D03DC1;
     text-align: center;
-    font-family: 'DM Sans', sans-serif;
+    /* font-family: 'DM Sans', sans-serif; */
     font-weight: 700;
 }
 
@@ -19,7 +19,7 @@
     color: rgb(63, 6, 116);
     text-align: center;
     margin-top: 80px;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    font-family: 'DM sans', sans-serif;
     font-weight: 400;
     
 }
@@ -31,3 +31,18 @@
     font-family: 'Fira Sans Condensed', sans-serif;
     font-weight: 400;
 }
+
+
+
+@media(max-width:600px){
+    .pinkytext {
+        font-size: 35px;
+    }
+}
+
+@media(max-width:350px){
+    .pinkytext {
+        font-size: 25px;
+    }
+}
+

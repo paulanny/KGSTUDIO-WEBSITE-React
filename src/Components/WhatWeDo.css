@@ -50,3 +50,40 @@
     background-color: #D03DC1;
     margin: auto;
 }
+
+@media(max-width:1000px) {
+    .servicesTextsndImg {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 40px;
+        margin: 40px auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .servicesTextsndImg:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .serviceimg {
+        width: 75%;
+        margin-top: 45px;
+    }
+
+    .servicesTexts {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+@media(max-width:600px) {
+    .serviceimg {
+        width: 100%;
+        margin-top: 45px;
+    }
+
+    .serviceimg img {
+        width: 100%;
+    }
+}

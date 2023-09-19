@@ -52,19 +52,21 @@ function NavBar(props) {
       </div>
   
       <div className={`backgrounddis ${isMobileMenuOpen ? "backgroundclose" : ""}`}>
-        <div className="spandiv"> 
+        {/* <div className="spandiv"> 
           <span></span>
           <span></span>
           <span></span>
           <span></span>
-          </div>
+          </div> */}
           <div className={`mobilemenulinks ${isMobileMenuOpen ? "mobilemenuOpen" : ""}`}>
           <a>About us</a>
           <a>Our Team</a>
           <a>Contact us</a>
           <a>Designs</a>
           <a>Unknown</a>
+          <button className="menubookkdes" onClick={props.showModal}>Book a Design</button>
         </div>
+        
         </div>
     </div>
   );
