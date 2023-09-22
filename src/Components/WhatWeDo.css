@@ -39,7 +39,7 @@
     font-size: 16px;
 }
 
-.servicesTextsndImg:nth-child(even) {
+ .linediv .servicesTextsndImg:nth-child(even) {
     flex-direction: row-reverse;
 }
 
@@ -49,6 +49,11 @@
     display: flex;
     background-color: #D03DC1;
     margin: auto;
+}
+
+.linediv {
+    display: flex;
+    flex-direction: column;
 }
 
 @media(max-width:1000px) {

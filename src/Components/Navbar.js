@@ -22,7 +22,6 @@ function NavBar(props) {
     };
   }, []);
 
-
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -31,16 +30,33 @@ function NavBar(props) {
       <div className="navbarimg">
         <img src={kaapitLogo} alt="kaapitlogoimage" />
         <nav className="navbarlists">
-          <a>About us</a>
-          <a>Our Team</a>
-          <a>Contact us</a>
-          <a>Designs</a>
-          <a>Unknown</a>
+          <a>
+            About us
+            <span></span>
+          </a>
+          <a>
+            Our Team
+            <span></span>
+          </a>
+          <a>
+            Contact us
+            <span></span>
+          </a>
+          <a>
+            Designs
+            <span></span>
+          </a>
+          <a>
+            Unknown
+            <span></span>
+          </a>
         </nav>
       </div>
 
       <div className="btnmenu">
-        <button className="bookkdes" onClick={props.showModal}>Book a Design</button>
+        <button className="bookkdes" onClick={props.showModal}>
+          Book a Design
+        </button>
         <div
           className={`menu ${isMobileMenuOpen ? "menuclose" : ""}`}
           onClick={toggleMobileMenu}
@@ -50,26 +66,48 @@ function NavBar(props) {
           <div className="third"></div>
         </div>
       </div>
-  
-      <div className={`backgrounddis ${isMobileMenuOpen ? "backgroundclose" : ""}`}>
+
+      {/* <div
+        className={`backgrounddis ${isMobileMenuOpen ? "backgroundclose" : ""}`}
+      > */}
         {/* <div className="spandiv"> 
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           </div> */}
-          <div className={`mobilemenulinks ${isMobileMenuOpen ? "mobilemenuOpen" : ""}`}>
-          <a>About us</a>
-          <a>Our Team</a>
-          <a>Contact us</a>
-          <a>Designs</a>
-          <a>Unknown</a>
-          <button className="menubookkdes" onClick={props.showModal}>Book a Design</button>
+        <div
+        onClick={toggleMobileMenu}
+          className={`mobilemenulinks ${
+            isMobileMenuOpen ? "mobilemenuOpen" : ""
+          }`}
+        >
+          <a onClick={toggleMobileMenu}>
+            About us
+            <span></span>
+          </a>
+          <a onClick={toggleMobileMenu}>
+            Our Team
+            <span></span>
+          </a>
+          <a onClick={toggleMobileMenu}>
+            Contact us
+            <span></span>
+          </a>
+          <a onClick={toggleMobileMenu}>
+            Designs
+            <span></span>
+          </a>
+          <a onClick={toggleMobileMenu}>
+            Unknown
+            <span></span>
+          </a>
+          <button className="menubookkdes" onClick={props.showModal}>
+            Book a Design
+          </button>
         </div>
-        
-        </div>
-    </div>
+      </div>
+    //  </div>
   );
 }
 export default NavBar;
-
